@@ -1,0 +1,126 @@
+{
+  "region": "Indonesia",
+  "analysis_date": "2026-04-16",
+  "total_discussions": 150,
+  "time_period_days": 30,
+  "key_findings": {},
+  "grab_opportunities": [
+    "High price sensitivity detected: Launch budget coffee bundle subscriptions with local partners",
+    "Strong convenience preference: Optimize GrabExpress for <15min coffee delivery",
+    "Growing quality consciousness: Curate premium specialty coffee marketplace"
+  ],
+  "competitive_threats": [
+    "Gojek's strong presence in Indonesia F&B delivery",
+    "Direct cafe apps offering loyalty programs",
+    "Traditional retail expansion into delivery (Alfamart, Indomaret)",
+    "New specialized coffee delivery startups"
+  ],
+  "strategic_recommendations": [
+    "Introduce 'Coffee Pass' - unlimited monthly coffee from partner warungs at fixed price",
+    "Partner with offices for bulk morning coffee delivery subscriptions",
+    "Launch 'Grab Coffee Reserve' - direct trade with Indonesian coffee farmers"
+  ],
+  "daily_discussion_volume": {
+    "2026-03-17": 2,
+    "2026-03-18": 4,
+    "2026-03-19": 4,
+    "2026-03-20": 7,
+    "2026-03-21": 4,
+    "2026-03-22": 3,
+    "2026-03-23": 2,
+    "2026-03-24": 7,
+    "2026-03-25": 6,
+    "2026-03-26": 3,
+    "2026-03-27": 2,
+    "2026-03-28": 7,
+    "2026-03-29": 4,
+    "2026-03-30": 9,
+    "2026-03-31": 7,
+    "2026-04-01": 3,
+    "2026-04-02": 7,
+    "2026-04-03": 3,
+    "2026-04-04": 6,
+    "2026-04-05": 6,
+    "2026-04-06": 2,
+    "2026-04-07": 4,
+    "2026-04-08": 4,
+    "2026-04-09": 5,
+    "2026-04-10": 6,
+    "2026-04-11": 8,
+    "2026-04-12": 5,
+    "2026-04-13": 5,
+    "2026-04-14": 6,
+    "2026-04-15": 7,
+    "2026-04-16": 2
+  },
+  "top_discussed_topics": {
+    "coffee": 202,
+    "local": 49,
+    "quality": 45,
+    "kopi": 31,
+    "affordable": 31,
+    "like": 30,
+    "prices": 29,
+    "specialty": 28,
+    "shops": 28,
+    "social": 28,
+    "much": 27,
+    "options": 25,
+    "kenangan": 25,
+    "jakarta": 24,
+    "convenience": 21,
+    "grab": 21,
+    "premium": 20,
+    "instant": 20,
+    "beans": 20,
+    "scene": 18
+  },
+  "segment_distribution": {
+    "price_sensitive": {
+      "count": 118,
+      "percentage": 78.67
+    },
+    "convenience_seekers": {
+      "count": 54,
+      "percentage": 36.0
+    },
+    "quality_focused": {
+      "count": 82,
+      "percentage": 54.67
+    },
+    "social_drinkers": {
+      "count": 41,
+      "percentage": 27.33
+    },
+    "habitual_consumers": {
+      "count": 41,
+      "percentage": 27.33
+    },
+    "brand_loyal": {
+      "count": 40,
+      "percentage": 26.67
+    }
+  },
+  "regional_insights": {
+    "market_characteristics": [
+      "Kopi susu (milk coffee) dominates mass market",
+      "Warung kopi (traditional coffee shops) remain culturally significant",
+      "Rising middle class driving premiumization trend",
+      "Digital payment adoption accelerating post-pandemic"
+    ],
+    "grab_specific_actions": [
+      "Partner with Kopi Kenangan, Janji Jiwa for exclusive promotions",
+      "Integrate loyalty program across GrabFood, GrabMart, GrabPay",
+      "Enable pre-ordering for peak morning hours (7-9 AM)",
+      "Create 'Kopi Lokal' campaign promoting Indonesian beans"
+    ]
+  },
+  "engagement_by_segment": {
+    "price_sensitive": 234.26,
+    "convenience_seekers": 207.11,
+    "quality_focused": 228.71,
+    "social_drinkers": 260.54,
+    "habitual_consumers": 268.73,
+    "brand_loyal": 235.35
+  }
+}
