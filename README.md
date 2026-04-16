@@ -1,104 +1,141 @@
-# Coffee Trends & Market Intelligence Dashboard
+# ☕ APAC Coffee Consumer Intelligence Dashboard
 
-## ☕ Reddit Coffee Discussion Analyzer for Grab Superapp Strategy
+**Strategic Market Insights for Grab Superapp** - Powered by FREE data sources (No API keys required)
 
-A professional-grade analytics platform combining **consumer behavior economics**, **family economics principles**, and **AI engineering** to extract actionable market insights from Reddit coffee discussions.
+## 📋 Overview
 
-### Features
+This tool scrapes **free, publicly available data** from:
+- **Hacker News** (JSON API - no auth needed)
+- **RSS Feeds** from coffee industry publications
+- **Google News RSS** for regional APAC news
 
-- **Reddit Data Scraping**: Automated collection of coffee-related discussions from global and APAC-specific subreddits
-- **Consumer Segmentation**: AI-powered classification into 6 behavioral segments:
-  - Price Sensitive (Economic Utility Theory)
-  - Convenience Seekers (Time-Value Tradeoff)
-  - Quality Focused (Veblen Goods Behavior)
-  - Social Drinkers (Network Externalities)
-  - Habitual Consumers (Behavioral Economics)
-  - Brand Loyal (Marketing Psychology)
-- **Market Insights**: Strategic recommendations for Grab's superapp expansion in Indonesia/APAC
-- **Interactive Dashboard**: Streamlit-powered visualization with filtering by time period, region, and segment
+It applies a **behavioral economics framework** to classify consumers and generate strategic insights for Grab's coffee market strategy in Indonesia/APAC.
 
-### Files
+## 🚀 Quick Start
 
-| File | Description |
-|------|-------------|
-| `reddit_scraper.py` | Reddit API scraper with consumer behavior analysis engine |
-| `streamlit_app.py` | Interactive dashboard for data visualization |
-| `coffee_discussions.csv` | Raw scraped discussion data |
-| `market_insights.json` | Generated market insights and recommendations |
-| `segment_analysis.json` | Consumer segmentation results |
-
-### Quick Start
+### 1. Install Dependencies
 
 ```bash
-# Install dependencies
-pip install praw streamlit pandas plotly numpy
+pip install streamlit pandas plotly feedparser requests textblob beautifulsoup4
+```
 
-# Run the scraper to collect data
-python reddit_scraper.py
+### 2. Run the Scraper (Collect Live Data)
 
-# Launch the Streamlit dashboard
+```bash
+python scraper.py
+```
+
+This will:
+- Scrape Hacker News top stories for coffee discussions
+- Fetch articles from 5+ coffee industry RSS feeds
+- Pull regional news from Google News RSS (Indonesia, Singapore, APAC)
+- Classify each article by consumer segment using behavioral markers
+- Generate sentiment scores and engagement metrics
+- Save results to `coffee_discussions.csv` and `market_insights.json`
+
+### 3. Launch the Dashboard
+
+```bash
 streamlit run streamlit_app.py
 ```
 
-### Dashboard Access
+The dashboard will open at `http://localhost:8501`
 
-Once running, access the dashboard at:
-- **Local**: http://localhost:8501
-- **Network**: http://[YOUR_IP]:8501
+## 🎯 Features
 
-### Key Insights for Grab
+### Consumer Segmentation (Behavioral Economics Framework)
+- **Price Sensitive**: Detects promo/discount language (critical in Indonesia)
+- **Quality Focused**: Identifies specialty coffee enthusiasts
+- **Convenience Seekers**: Flags delivery/app-related discussions (GrabFood opportunity)
+- **Social Drinkers**: Finds cafe hangout/work-from-cafe mentions
+- **Habitual Consumers**: Recognizes daily routine/addiction patterns
+- **Brand Loyal**: Tracks brand-specific loyalty signals
 
-Based on the analysis:
+### Market Insights for Grab
+- Regional sentiment analysis (Indonesia, Singapore, Malaysia, Thailand, Vietnam, Philippines)
+- Topic trend detection (pricing, delivery, new openings, innovation)
+- Strategic recommendations auto-generated based on segment distribution
+- Competitive intelligence on local chains (Kopi Kenangan, Janji Jiwa, etc.)
 
-#### 🎯 Opportunities Identified
-1. **High price sensitivity** (78.67%): Launch budget coffee bundle subscriptions
-2. **Strong convenience preference** (36%): Optimize GrabExpress for <15min delivery
-3. **Growing quality consciousness** (54.67%): Curate premium specialty marketplace
+### Interactive Dashboard
+- Filter by time period, region, consumer segment, and data source
+- Visualize trends with Plotly charts (time series, treemaps, pie charts)
+- Download filtered datasets as CSV
+- Real-time strategic insights panel
 
-#### 📋 Strategic Recommendations
-- Introduce 'Coffee Pass' - unlimited monthly coffee from partner warungs
-- Partner with offices for bulk morning coffee delivery subscriptions
-- Launch 'Grab Coffee Reserve' - direct trade with Indonesian farmers
+## 📁 Files
 
-#### ⚠️ Competitive Threats
-- Gojek's strong presence in Indonesia F&B delivery
-- Direct cafe apps offering loyalty programs
-- Traditional retail expansion (Alfamart, Indomaret)
+| File | Description |
+|------|-------------|
+| `scraper.py` | Main scraping engine (Hacker News + RSS + Google News) |
+| `streamlit_app.py` | Interactive dashboard for market analysis |
+| `coffee_discussions.csv` | Scraped data output |
+| `market_insights.json` | Auto-generated strategic insights |
 
-### Regional Coverage
+## 🔍 Data Sources (All Free, No API Keys)
 
-- **Indonesia** (Jakarta, Bali)
-- **Singapore**
-- **Malaysia**
-- **Thailand**
-- **Philippines**
-- **APAC Regional Analysis**
+### Hacker News
+- Endpoint: `https://hacker-news.firebaseio.com/v0/topstories.json`
+- Searches for coffee-related discussions in tech community
 
-### Configuration
+### RSS Feeds
+- Perfect Daily Grind (specialty coffee news)
+- Barista Magazine
+- Sprudge (global coffee culture)
+- TechCrunch (coffee tech/startups)
+- Food Navigator Asia (F&B industry trends)
 
-To use real Reddit API (instead of demo mode):
+### Google News RSS
+- Custom queries for: "coffee price Indonesia", "Grab coffee delivery", "Kopi Kenangan"
+- Region-specific feeds (ID, SG, MY, TH, VN, PH)
 
-```python
-# Set environment variables or pass credentials directly
-export PRAW_REDDIT_CLIENT_ID="your_client_id"
-export PRAW_REDDIT_CLIENT_SECRET="your_client_secret"
+## 💡 Strategic Use Cases for Grab
 
-# Or in code:
-scraper = RedditCoffeeScraper(
-    client_id="your_client_id",
-    client_secret="your_client_secret",
-    user_agent="your_app_name"
-)
+1. **Product Development**: Identify unmet needs in Price Sensitive segment → Launch subscription bundles
+2. **Marketing Campaigns**: Target Convenience Seekers with time-sensitive promotions
+3. **Partnership Strategy**: Partner with cafes popular among Social Drinkers
+4. **Regional Expansion**: Prioritize markets with high positive sentiment
+5. **Competitive Intelligence**: Monitor local brand mentions vs international chains
+
+## ⚠️ Notes
+
+- **Rate Limiting**: Built-in delays prevent blocking (0.3-0.5s between requests)
+- **Data Freshness**: Re-run scraper daily for latest insights
+- **Network Required**: Active internet connection needed for scraping
+- **No Storage**: Data is not persisted beyond CSV/JSON files (run scraper each session)
+
+## 🛠 Troubleshooting
+
+**"No data collected"**
+- Check internet connection
+- Some RSS feeds may be temporarily unavailable (normal)
+- Try running again after a few minutes
+
+**"Module not found"**
+```bash
+pip install -U streamlit pandas plotly feedparser requests textblob beautifulsoup4
 ```
 
-### Academic Framework
+## 📊 Sample Output
 
-This tool applies principles from:
-- **Consumer Behavior Economics**: Understanding purchase decision drivers
-- **Family Economics**: Household spending patterns and budget allocation
-- **Behavioral Economics**: Habit formation and choice architecture
-- **AI/ML Engineering**: NLP-based sentiment and topic analysis
+After running the scraper, you'll see:
+```
+🚀 Starting APAC Coffee Intelligence Scraper
+==================================================
+📰 Scraping Hacker News...
+   ✓ Found 3 coffee discussions
+📡 Scraping RSS Feeds...
+   ✓ Found 27 articles from RSS feeds
+🌐 Scraping Google News...
+   ✓ Found 42 news articles
+
+✅ Successfully scraped 72 discussions
+📁 Data saved to: coffee_discussions.csv
+
+🧠 Generating Market Insights...
+✅ Insights saved to: market_insights.json
+```
 
 ---
 
-Built with ❤️ for Grab's market intelligence team
+**Built for Grab Product & Strategy Teams** | *No API keys • Free data sources • Behavioral economics framework*
