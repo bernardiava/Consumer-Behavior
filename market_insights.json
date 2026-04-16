@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-04-16T14:24:37.519487",
+  "total_articles": 85,
+  "target_market": "Grab (Indonesia/APAC)",
+  "segment_distribution": {
+    "Convenience Seekers": 30.59,
+    "Brand Loyal": 18.82,
+    "Quality Focused": 14.12,
+    "General Consumer": 14.12,
+    "Price Sensitive": 11.76,
+    "Social Drinkers": 8.24,
+    "Habitual Consumers": 2.35
+  },
+  "regional_sentiment": {
+    "APAC Regional": 0.181,
+    "Indonesia": 0.033,
+    "Malaysia": 0.163,
+    "Singapore": 0.184,
+    "Thailand": 0.0
+  },
+  "top_topics": {
+    "General Discussion": 41,
+    "New Openings": 12,
+    "Delivery & Apps": 11,
+    "Pricing & Promotions": 10,
+    "Sustainability": 5
+  },
+  "key_findings": {
+    "price_sensitivity": "11.8% of discussions focus on pricing",
+    "convenience_demand": "30.6% prioritize delivery/apps",
+    "strongest_market": "Singapore"
+  },
+  "strategic_recommendations": [
+    "Launch 'Coffee Subscription Pass' targeting Price Sensitive segment",
+    "Bundle coffee with GrabExpress for Convenience Seekers",
+    "Partner with local specialty cafes for Quality Focused users",
+    "Create 'Work-from-Cafe' packages for Social Drinkers"
+  ]
+}
